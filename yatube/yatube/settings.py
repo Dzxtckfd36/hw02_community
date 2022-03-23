@@ -32,8 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'posts.apps.PostsConfig',
+    'users.apps.UsersConfig',
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth',  # Приложение для регистрация и авторизация польз
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',

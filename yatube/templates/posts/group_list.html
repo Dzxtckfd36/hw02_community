@@ -1,7 +1,7 @@
 <!-- templates/posts/group_list.html --> 
 {% extends 'base.html' %}
 {% block title %}
-  {{ title }}
+  Записи сообщества {{ title }}
 {% endblock title %}
 {% block content %}
 <div class="container">
@@ -23,9 +23,6 @@
       {{ post.text }}
     </p>         
   </article>
-  {% if post.group %}   
-    <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
-    {% endif %}
     {% if not forloop.last %}<hr>{% endif %}
   {% endfor %} 
 {% endblock %}
