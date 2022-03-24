@@ -1,9 +1,11 @@
-from django.contrib.auth.views import LogoutView
 from django.urls import path
+from django.contrib.auth.views import LogoutView
+from . import views
 
 app_name = 'users'
 
 urlpatterns = [
+    path('signup/', views.SignUp.as_view(), name='signup'),
     path(
         'logout/',
         # Прямо в описании обработчика укажем шаблон,
