@@ -5,7 +5,7 @@
 {% block content %}
 <div class="container">        
   <h1>Последние обновления на сайте</h1>
-  {% for post in posts %}
+  {% for post in page_obj %}
   <article>
     <ul>
       <li>
@@ -22,5 +22,6 @@
   </article>
   {% if not forloop.last %}<hr>{% endif %}
   {% endfor %}
+  {% include 'C:\Dev\hw02_community\yatube\templates\includes\paginator.html' %}
 </div>
 {% endblock %}
