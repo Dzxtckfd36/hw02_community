@@ -9,7 +9,6 @@ from .models import Post, Group, User
 POSTS = 10
 PAGE = 5
 
-@login_required
 def index(request):
     posts_list = Post.objects.all()
     paginator = Paginator(posts_list, POSTS)
